@@ -8,7 +8,7 @@
     font-family: 'Poppins', sans-serif;
 }
 body{
-    background: url("imagens/sapinhos.jpg");
+    background: url("imagens/img3.gif");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -30,7 +30,8 @@ body{
     line-height: 100px;
     background: linear-gradient(rgba(39,39,39, 0.6), transparent);
     z-index: 100;
-}.nav-logo p{
+}
+.nav-logo p{
     color: white;
     font-size: 25px;
     font-weight: 600;
@@ -41,7 +42,7 @@ body{
 .nav-menu ul li{
     list-style-type: none;
 }
-.nav-menuul li .link{
+.nav-menu ul li .link{
     text-decoration: none;
     font-weight: 500;
     color: #fff;
@@ -74,15 +75,16 @@ body{
     background: rgba(255, 255, 255, 0.5);
 }
 .nav-menu-btn{
-    display: none;
+    display: flex;
+    justify-content: space-between;
 }
 .form-box{
     position: relative;
     display: flex;
     align-items: center;
     width: 512px;
-    height: 420px;
-   overflow: hidden;
+    height: 600px;
+    overflow: hidden;
     z-index: 2;
 }
 .login-container{
@@ -103,24 +105,25 @@ body{
 }
 .top span{
     color: #fff;
-    font-size: 5px;
-    padding: 10px 0;
+    font-size: 20px;
+    padding: 20px 0;
     display: flex;
     justify-content: center;
 }
 .top span a{
-    font-weight: 500;
+    font-weight: 100;
     color: #fff;
     margin-left: 5px;
 }
 header{
     color: #fff;
-    font-size: 30px;
+    font-size: 50px;
     text-align: center;
     padding: 10px 0 30px 0;
 }
 .two-forms{
     display: flex;
+    flex-direction: column;
     gap: 10px;
 }
 .input-field{
@@ -131,7 +134,7 @@ header{
     width: 100%;
     padding: 0 10px 0 45px;
     border: none;
-    border-radius: 30px;
+    border-radius: 300px;
     outline: none;
     transition: .2s ease;
 }
@@ -187,10 +190,12 @@ header{
     .nav-button {
         display: none;
     }
-
+    .nav-menu.responsive {
+        top: 100px;
+    }
      .nav-menu {
         position: absolute;
-        top: 100px;
+        top: -800px;
         display: flex;
         justify-content: center;
         background: rgba(255, 255, 255, 0.2);
@@ -198,15 +203,15 @@ header{
         height: 90vh;
         backdrop-filter: blur(20px);
         transition: .3s;
-}
+    }
  
      .nav-menu ul {
         flex-direction: column;
         text-align: center;
-}
+    }
      .nav-menu-btn{
         display: block;
-}
+    }
      .nav-menu-btn i{
         font-size: 25px;
         color: #fff;
@@ -215,10 +220,25 @@ header{
         border-radius: 50%;
         cursor: pointer;
         transition: .3s;
-}
-     .nav-menu-btn i:hover{
+    }
+    .nav-menu-btn i:hover{
         background: rgba(255, 255, 255, 0.15);
-
+    }
 }
+@media only screen and (max-width: 540px) {
+    .wrapper{
+        min-height: 100vh;
+    }
+    .form-box {
+        width: 100%;
+        height: 500px;
+    }
+    .register-container, .login-container {
+        width: 100%;
+        padding: 0 20px;
+    }
+    .register-container .two-forms{
+        flex-direction: column;
+        gap: 0;
+    }
 }
-

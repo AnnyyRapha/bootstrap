@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://unpkg.com/boxicon@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <title>Login & Registration</title>
 </head>
@@ -14,7 +14,7 @@
     <div class="nav-logo">
       <p>LOGO .</p>
     </div>
-    <div class="nav-menu">
+    <div class="nav-menu" id="navMenu">
       <ul>
         <li><a href="#" class="link active">Home</a></li>
         <li><a href="#" class="link">Blog</a></li>
@@ -27,6 +27,7 @@
       <button class="btn" id="registerBtn" onclick="register()">Sign Up</button>
     </div>
     <div class="nav-menu-btn">
+      <i class="bx bx-menu"></i>
       <box-icon name='menu' rotate='180' onclick="myMenufunction()"></box-icon>
     </div>
   </nav>
@@ -57,58 +58,72 @@
           <div class="two-col">
             <div class="one">
               <input type="checkbox" id="login-check">
-              <label for="login-check"> Remember Me</label>
+              <label for="login-check"> Remember me</label>
             </div>
             <div class="two">
-              <label><a href="#">|Forgot password?</a></label>
+              <label><a href="#">Forgot password?</a></label>
             </div>
           </div>
 </div>
   
   <!--------------- Registration form ---------------->
-<div class="register-container" id="register">
-    <div class="top">
-      <span>Have an account? <a href="#" onclick="login()">Login</a></span>
-      <header>Sign Up</header>
-    </div>
+
+  <div class="register-container" id="register">
+  <div class="top">
+    <span>Have an account? <a href="#" onclick="login()">Login</a></span>
+    <header>Sign Up</header>
+  </div>
     <div class="two-forms">
 
-      <div class="input-box">
-        <input type="text" class="input-field" placeholder="Firstname">
-        <i class="bx bx-user"></i>
-      </div>
+  <div class="input-box">
+    <input type="text" class="input-field" placeholder="Firstname">
+    <i class="bx bx-user"></i>
+  </div>
 
-        <div class="input-box">
-          <input type="text" class="input-field" placeholder="Lastname">
-          <i class="bx bx-user"></i>
-        </div>
+  <div class="input-box">
+    <input type="text" class="input-field" placeholder="Lastname">
+    <i class="bx bx-user"></i>
+  </div>
 
-      <div class="input-box">
-        <input type="text" class="input-field" placeholder="E-mail">
-        <i class="bx bx-envelope"></i>
-      </div>
+  <div class="input-box">
+    <input type="text" class="input-field" placeholder="E-mail">
+    <i class="bx bx-envelope"></i>
+  </div>
 
-        <div class="input-box">
-          <input type="password" class="input-field" placeholder="Password">
-          <i class="bx bx-lock-alt"></i>
-        </div>
+  <div class="input-box">
+    <input type="password" class="input-field" placeholder="Password">
+    <i class="bx bx-lock-alt"></i>
+  </div>
 
-          <div class="input-box">
-            <input type="submit" class="submit" value="Register">
-          </div>
+  <div class="input-box">
+    <input type="submit" class="submit" value="Register">
+  </div>
 
-          <div class="two-col">
+       <div class="two-col">
             <div class="one">
               <input type="checkbox" id="register-check">
-              <label for="register-check"> Remember Me</label>
+              <label for="register-check"> Remember me</label>
             </div>
-            <div class="two">
-              <label><a href="#">Terms & Conditions</a></label>
-            </div>
-          </div>
+         <div class="two">
+          <label><a href="#">Terms & Conditions</a></label>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
- </div>
+ 
+<script>
+  function myMenufunction() {
+    var i = document.getElementById("navMenu");
+
+    if(i.className === "nav-menu") {
+      i.className += " responsive";
+    } else {
+      i.className = "nav-menu"
+    }
+  }
+
+</script>
 
 <script>
 
